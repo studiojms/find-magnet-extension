@@ -47,4 +47,4 @@ After the project has been built (`npm run build` | `yarn build`), a directory n
 
 ### Obs
 
-There is an already built version, that can be downloaded [here](find-magnet.zip)
+There is an already built version, that can be downloaded [here](find-magnet.zip?raw=true)
