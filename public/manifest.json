@@ -1,6 +1,6 @@
 {
   "name": "Find Magnet",
-  "description": "A browser extension to look for magnet links",
+  "description": "Look for magnet links in the page code",
   "manifest_version": 2,
   "version": "1.0.0",
   "icons": {
@@ -10,11 +10,12 @@
   },
   "browser_action": {
     "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png"
+      "16": "icon16-disabled.png",
+      "48": "icon48-disabled.png"
     },
     "default_popup": "popup.html"
   },
+  "permissions": ["declarativeContent", "activeTab"],
   "background": {
     "scripts": [
       "background.js"
