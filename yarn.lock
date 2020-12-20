@@ -883,6 +883,18 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@ctrl/magnet-link@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@ctrl/magnet-link/-/magnet-link-2.0.4.tgz#88e24a4b9219832dca6de0045e7823b5b6b2e23a"
+  integrity sha512-B6Sw3Szb4BPWJjPEn8exYL8U2q01NLK11KsUVX38CWEOV1RtqmxcpfBd2sts2vTrDpLK2n7fIaVOSu60FSK1yw==
+  dependencies:
+    "@ctrl/ts-base32" "^1.2.4"
+
+"@ctrl/ts-base32@^1.2.4":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@ctrl/ts-base32/-/ts-base32-1.2.5.tgz#c486b39ce5401571c178542f854952e68fed36f4"
+  integrity sha512-SQ8WAGQpU/30jXfgceh36/u+KEDs93pRf3NA5uptYNLPq5fyVC7shAB/oo3loBxKwE6ZCsz0tJpCnYjF2mhVRg==
+
 "@eslint/eslintrc@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.2.2.tgz#d01fc791e2fc33e88a29d6f3dc7e93d0cd784b76"
