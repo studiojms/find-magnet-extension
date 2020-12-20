@@ -12,6 +12,7 @@
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@ctrl/magnet-link": "^2.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0"

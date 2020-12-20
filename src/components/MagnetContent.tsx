@@ -1,6 +1,15 @@
 import { FC, useEffect, useState } from 'react';
+import { MagnetData, magnetDecode, magnetEncode } from '@ctrl/magnet-link';
 
 import { AllowedTypes, ProcessType } from '../types';
+
+function decodeMagnet(link: string) {
+  return magnetDecode(link);
+}
+
+function encodeMagnet(data: MagnetData): string {
+  return magnetEncode(data);
+}
 
 export const MagnetContent: FC = () => {
   const [foundMagnets, setFoundMagnets] = useState<string[]>([]);
@@ -32,9 +41,15 @@ export const MagnetContent: FC = () => {
 
       <div className="items text-normal">
         <ul>
-          {foundMagnets.map((m) => (
-            <li key={m}>{m}</li>
-          ))}
+          {foundMagnets.map((m) => {
+            const decodedData = decodeMagnet(m);
+            const encodedData = encodeMagnet(decodedData);
+            return (
+              <li key={encodedData}>
+                <a href={encodedData}>{decodedData?.name || encodedData}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>
