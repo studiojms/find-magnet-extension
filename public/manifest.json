@@ -15,7 +15,7 @@
     },
     "default_popup": "popup.html"
   },
-  "permissions": ["declarativeContent", "activeTab"],
+  "permissions": ["activeTab"],
   "background": {
     "scripts": [
       "background.js"
