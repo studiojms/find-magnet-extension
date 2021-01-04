@@ -2,6 +2,8 @@ import { FC, useEffect, useState } from 'react';
 import { MagnetData, magnetDecode, magnetEncode } from '@ctrl/magnet-link';
 
 import { AllowedTypes, ProcessType } from '../types';
+import copy from '../assets/copy.svg';
+import Toast from './Toast';
 
 function decodeMagnet(link: string) {
   return magnetDecode(link);
@@ -13,6 +15,7 @@ function encodeMagnet(data: MagnetData): string {
 
 export const MagnetContent: FC = () => {
   const [foundMagnets, setFoundMagnets] = useState<string[]>([]);
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     //asks data to be retrieved
@@ -33,7 +36,15 @@ export const MagnetContent: FC = () => {
           break;
       }
     });
-  });
+  }, []);
+
+  const copyToClipboard = (data: string) => {
+    navigator.clipboard.writeText(data);
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 2000);
+  };
 
   return (
     <>
@@ -46,12 +57,16 @@ export const MagnetContent: FC = () => {
             const encodedData = encodeMagnet(decodedData);
             return (
               <li key={encodedData}>
+                <button type="button" className="btn-copy" title="Copy" onClick={() => copyToClipboard(encodedData)}>
+                  <img src={copy} />
+                </button>
                 <a href={encodedData}>{decodedData?.name || encodedData}</a>
               </li>
             );
           })}
         </ul>
       </div>
+      <Toast message="Link copied to clipboard!" active={showToast} />
     </>
   );
 };

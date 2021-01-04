@@ -29,3 +29,53 @@
 .text-normal {
   text-align: justify;
 }
+
+.items ul {
+  list-style: none;
+}
+
+.items ul li {
+  text-align: left;
+  line-height: 28px;
+  margin-bottom: 3px;
+}
+
+.btn-copy {
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #88a4f3;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn-copy:focus {
+  outline-color: #4e7af5;
+}
+
+.btn-copy img {
+  width: 12px;
+  height: 12px;
+}
+
+.toast {
+  position: fixed;
+  width: 100%;
+  background-color: #213cfd;
+  background-image: linear-gradient(19deg, #213cfd 0%, #b421ff 100%);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  user-select: none;
+  bottom: -50px;
+  -webkit-transition: bottom 350ms;
+  -moz-transition: bottom 350ms;
+  -o-transition: bottom 350ms;
+  -ms-transition: bottom 350ms;
+  transition: bottom 350ms;
+}
+
+.toast.active {
+  bottom: 20px;
+}
