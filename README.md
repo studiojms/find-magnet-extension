@@ -2,6 +2,8 @@
 
 A browser extension to look for magnet links in each page
 
+<img src="https://github.githubassets.com/images/modules/site/icons/funding_platforms/patreon.svg" width="20"> [studiojms](https://patreon.com/studiojms)
+
 ### Example
 
 ![Example](find-magnet.gif)
